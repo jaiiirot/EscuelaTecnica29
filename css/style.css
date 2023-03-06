@@ -43,48 +43,22 @@ body {
         .menu__red ul li:hover a {
           color: #010202; }
   .menu__desk {
-    margin-top: 60px;
-    width: 100%;
+    margin-top: 30px;
     display: flex;
     justify-content: space-around;
     align-items: center; }
-    .menu__desk a {
-      display: grid;
-      grid-template-columns: auto auto;
-      grid-template-areas: "a b" "a c";
-      align-items: center; }
-      .menu__desk a p {
-        color: #F4F4F4;
-        font-size: 1.2rem;
-        font-weight: 700; }
-    .menu__desk ul {
+    .menu__desk a img {
+      height: 100px; }
+    .menu__desk .menu__options {
       gap: 50px; }
-      .menu__desk ul li a {
+      .menu__desk .menu__options li a {
         font-size: 1.2rem;
-        font-weight: 700;
+        font-weight: 600;
         color: #F4F4F4; }
-      .menu__desk ul li a:hover {
+      .menu__desk .menu__options li a:hover {
         color: #CE171B; }
-      .menu__desk ul li .menu__options--active {
+      .menu__desk .menu__options li .menu__options--active {
         color: #CE171B; }
-      .menu__desk ul li[class="op"] {
-        position: relative; }
-        .menu__desk ul li[class="op"]:hover .menu__options--none {
-          display: unset;
-          position: absolute;
-          flex-direction: column;
-          gap: 10px;
-          background: #262A2B;
-          width: 150px;
-          left: -25px; }
-          .menu__desk ul li[class="op"]:hover .menu__options--none li a {
-            font-size: 1rem;
-            padding: 10px;
-            color: #F4F4F4; }
-          .menu__desk ul li[class="op"]:hover .menu__options--none li:hover {
-            background: #529BBA; }
-        .menu__desk ul li[class="op"] .menu__options--none {
-          display: none; }
 
 main .secUno {
   position: relative;
