@@ -1,3 +1,4 @@
-*_sass
 *.scss
-style.css.map
+scss
+*.json
+node_modules
