@@ -13,10 +13,21 @@
 body {
   height: max-content; }
 
+.butt {
+  padding: 15px 20px;
+  color: #F4F4F4;
+  background: #830507;
+  border-radius: 25px;
+  font-size: 1rem; }
+  .butt:hover {
+    background: #162930;
+    outline: 2px solid #F4F4F4; }
+
 .menu {
   width: 100%;
   height: min-content;
-  position: absolute; }
+  position: absolute;
+  z-index: 100; }
   .menu__red {
     width: 100%;
     display: flex;
@@ -43,31 +54,163 @@ body {
         .menu__red ul li:hover a {
           color: #010202; }
   .menu__desk {
-    margin-top: 30px;
+    background: #1a1a1a;
     display: flex;
     justify-content: space-around;
     align-items: center; }
     .menu__desk a img {
-      height: 100px; }
+      height: 70px; }
     .menu__desk .menu__options {
-      gap: 50px; }
+      gap: 15px; }
       .menu__desk .menu__options li a {
         font-size: 1.2rem;
         font-weight: 600;
-        color: #F4F4F4; }
+        color: #F4F4F4;
+        padding: 4px 10px; }
       .menu__desk .menu__options li a:hover {
-        color: #CE171B; }
+        background: #2A4F5E;
+        border-radius: 20px; }
       .menu__desk .menu__options li .menu__options--active {
-        color: #CE171B; }
+        color: #79B6D6; }
 
-main .secUno {
-  position: relative;
-  height: 100vh;
+main .secUIndex {
+  background: url("../../resources/img/fd2.jpg") no-repeat center fixed;
+  background-size: cover;
+  height: 95vh;
   width: 100%; }
-  main .secUnoIndex__img {
-    height: 100vh;
-    width: 100%;
-    overflow: hidden; }
-    main .secUnoIndex__img img {
-      object-fit: cover;
-      width: 100%; }
+  main .secUIndex__info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    gap: 2rem;
+    background: #000000c0; }
+    main .secUIndex__infoTex {
+      color: #F4F4F4;
+      width: max-content; }
+      main .secUIndex__infoTex h2 {
+        font-weight: 400;
+        font-size: 2rem; }
+      main .secUIndex__infoTex h1 {
+        font-size: 2.5rem; }
+    main .secUIndex__infoButt a {
+      border-radius: unset;
+      margin: 0px 5px; }
+    main .secUIndex__infoButt a:first-child {
+      background: #162930; }
+
+.secDIndex {
+  width: 100%;
+  height: min-content;
+  text-align: center; }
+  .secDIndex__titleNovedad {
+    height: 250px;
+    background-image: linear-gradient(180deg, #162930 100%, #2A4F5E 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%); }
+    .secDIndex__titleNovedad h2 {
+      font-size: 2.5rem;
+      color: #F4F4F4;
+      background: unset;
+      text-align: center;
+      line-height: 250px; }
+  .secDIndex__cards {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    align-content: center; }
+    .secDIndex__cards .card {
+      border: 2px solid #F4F4F4;
+      background: #F4F4F4;
+      overflow: hidden;
+      border-radius: 15px;
+      height: min-content;
+      width: 100%;
+      margin-bottom: 2rem; }
+      .secDIndex__cards .cardIma {
+        width: 100%;
+        height: 200px;
+        overflow: hidden; }
+        .secDIndex__cards .cardIma img {
+          width: 100%;
+          object-fit: cover;
+          object-position: 0 -50px; }
+      .secDIndex__cards .cardTex {
+        text-align: start;
+        padding: 20px; }
+        .secDIndex__cards .cardTex p {
+          margin: 20px 0px;
+          height: 100px;
+          overflow: hidden; }
+        .secDIndex__cards .cardTex .butt {
+          padding: 5px 10px;
+          border-radius: unset; }
+  .secDIndex__butt {
+    margin: auto;
+    border-radius: unset;
+    background: unset;
+    border: 2px solid #830507;
+    color: #010202;
+    font-weight: 700; }
+    .secDIndex__butt:hover {
+      background: #F4F4F4;
+      border: 2px groove; }
+
+.secTIndex {
+  width: 100%;
+  height: min-content;
+  text-align: center; }
+  .secTIndex__titleEspecialidad {
+    height: 450px;
+    background: url("../../resources/img/fd4.jpg") no-repeat center fixed;
+    background-size: cover;
+    clip-path: polygon(0 25%, 100% 0%, 100% 100%, 0 70%); }
+    .secTIndex__titleEspecialidad h2 {
+      font-size: 2.5rem;
+      color: #F4F4F4;
+      background: #000000c0;
+      text-align: center;
+      line-height: 450px; }
+  .secTIndex__especialidad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px; }
+    .secTIndex__especialidad div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 20px;
+      width: 300px;
+      height: 300px;
+      background: #162930;
+      border-radius: 20px;
+      cursor: pointer; }
+      .secTIndex__especialidad div img {
+        width: 150px; }
+      .secTIndex__especialidad div h3 {
+        color: #F4F4F4; }
+      .secTIndex__especialidad div:hover {
+        transition: 150ms ease-in-out;
+        background: #830507;
+        box-shadow: #010202 15px 15px;
+        transform: translate(-15px, -15px); }
+
+.secCIndex {
+  width: 100%;
+  height: min-content;
+  text-align: center; }
+  .secCIndex__titleInformacion {
+    height: 450px;
+    background: url("../../resources/img/fd1.jpg") no-repeat bottom fixed;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 30%, 100% 70%, 0 100%); }
+    .secCIndex__titleInformacion h2 {
+      font-size: 2.5rem;
+      color: #F4F4F4;
+      background: #000000c0;
+      text-align: center;
+      line-height: 450px; }
