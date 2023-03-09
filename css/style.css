@@ -13,6 +13,9 @@
 body {
   height: max-content; }
 
+* img {
+  pointer-events: none; }
+
 .butt {
   padding: 15px 20px;
   color: #F4F4F4;
@@ -68,10 +71,62 @@ body {
         color: #F4F4F4;
         padding: 4px 10px; }
       .menu__desk .menu__options li a:hover {
-        background: #2A4F5E;
-        border-radius: 20px; }
+        background: #2A4F5E; }
       .menu__desk .menu__options li .menu__options--active {
         color: #79B6D6; }
+
+.footer {
+  background: #162930;
+  width: 100%;
+  height: min-content;
+  padding: 60px 0px; }
+  .footer__cont {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    gap: 60px; }
+    .footer__cont div {
+      display: flex; }
+      .footer__cont div ul {
+        flex-direction: column; }
+        .footer__cont div ul li {
+          font-size: 1rem;
+          color: #F4F4F4; }
+          .footer__cont div ul li a {
+            font-size: 1rem;
+            color: #F4F4F4;
+            padding: 0px 10px; }
+            .footer__cont div ul li a:hover {
+              color: #010202;
+              border-bottom: 2px solid; }
+    .footer__contInfo {
+      flex-direction: column; }
+      .footer__contInfo a {
+        margin-bottom: 20px; }
+        .footer__contInfo a img {
+          width: 300px; }
+      .footer__contInfo ul {
+        gap: 5px; }
+    .footer__contNave {
+      width: 100%;
+      justify-content: space-evenly; }
+      .footer__contNave ul {
+        gap: 8px; }
+        .footer__contNave ul li:first-child {
+          margin-bottom: 10px; }
+  .footer hr {
+    width: 90%;
+    margin: 25px auto; }
+  .footer__copy {
+    width: 80%;
+    margin: auto;
+    justify-content: space-between; }
+    .footer__copy li {
+      font-weight: 600;
+      color: #F4F4F4; }
+      .footer__copy li a {
+        font-weight: 600;
+        color: #F4F4F4; }
 
 main .secUIndex {
   background: url("../../resources/img/fd2.jpg") no-repeat center fixed;
@@ -106,7 +161,7 @@ main .secUIndex {
   text-align: center; }
   .secDIndex__titleNovedad {
     height: 250px;
-    background-image: linear-gradient(180deg, #162930 100%, #2A4F5E 100%);
+    background-image: linear-gradient(180deg, #162930 20%, #2A4F5E 100%);
     clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%); }
     .secDIndex__titleNovedad h2 {
       font-size: 2.5rem;
@@ -122,13 +177,15 @@ main .secUIndex {
     gap: 20px;
     align-content: center; }
     .secDIndex__cards .card {
-      border: 2px solid #F4F4F4;
+      border: 2px solid #dddddd;
       background: #F4F4F4;
       overflow: hidden;
       border-radius: 15px;
       height: min-content;
       width: 100%;
       margin-bottom: 2rem; }
+      .secDIndex__cards .card:hover {
+        transform: translate(-5px, -5px); }
       .secDIndex__cards .cardIma {
         width: 100%;
         height: 200px;
@@ -136,7 +193,7 @@ main .secUIndex {
         .secDIndex__cards .cardIma img {
           width: 100%;
           object-fit: cover;
-          object-position: 0 -50px; }
+          object-position: center; }
       .secDIndex__cards .cardTex {
         text-align: start;
         padding: 20px; }
@@ -151,19 +208,19 @@ main .secUIndex {
     margin: auto;
     border-radius: unset;
     background: unset;
-    border: 2px solid #830507;
+    outline: 2px solid #830507;
     color: #010202;
     font-weight: 700; }
     .secDIndex__butt:hover {
       background: #F4F4F4;
-      border: 2px groove; }
+      outline: 2px solid #010202; }
 
 .secTIndex {
   width: 100%;
   height: min-content;
   text-align: center; }
   .secTIndex__titleEspecialidad {
-    height: 450px;
+    height: 250px;
     background: url("../../resources/img/fd4.jpg") no-repeat center fixed;
     background-size: cover;
     clip-path: polygon(0 25%, 100% 0%, 100% 100%, 0 70%); }
@@ -172,11 +229,12 @@ main .secUIndex {
       color: #F4F4F4;
       background: #000000c0;
       text-align: center;
-      line-height: 450px; }
+      line-height: 250px; }
   .secTIndex__especialidad {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 50px; }
     .secTIndex__especialidad div {
       display: flex;
@@ -204,7 +262,7 @@ main .secUIndex {
   height: min-content;
   text-align: center; }
   .secCIndex__titleInformacion {
-    height: 450px;
+    height: 250px;
     background: url("../../resources/img/fd1.jpg") no-repeat bottom fixed;
     background-size: cover;
     clip-path: polygon(0 0, 100% 30%, 100% 70%, 0 100%); }
@@ -213,4 +271,4 @@ main .secUIndex {
       color: #F4F4F4;
       background: #000000c0;
       text-align: center;
-      line-height: 450px; }
+      line-height: 250px; }
