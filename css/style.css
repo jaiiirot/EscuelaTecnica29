@@ -26,36 +26,39 @@ body {
     background: #162930;
     outline: 2px solid #F4F4F4; }
 
+.red {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #162930;
+  height: 2.5rem; }
+  .red ul {
+    height: 100%;
+    gap: 20px; }
+    .red ul li {
+      display: flex;
+      align-items: center; }
+      .red ul li a {
+        color: #F4F4F4;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding: 0px 5px; }
+    .red ul li:hover {
+      background: #F4F4F4;
+      height: 100%; }
+      .red ul li:hover a {
+        color: #010202; }
+
 .menu {
   width: 100%;
   height: min-content;
-  position: absolute;
-  z-index: 100; }
-  .menu__red {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background: #162930;
-    height: 2.5rem; }
-    .menu__red ul {
-      height: 100%;
-      gap: 20px; }
-      .menu__red ul li {
-        display: flex;
-        align-items: center; }
-        .menu__red ul li a {
-          color: #F4F4F4;
-          font-size: 1rem;
-          display: flex;
-          align-items: center;
-          gap: 5px;
-          padding: 0px 5px; }
-      .menu__red ul li:hover {
-        background: #F4F4F4;
-        height: 100%; }
-        .menu__red ul li:hover a {
-          color: #010202; }
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: #000000c0 0px 10px 25px; }
   .menu__desk {
     background: #1a1a1a;
     display: flex;
@@ -131,7 +134,7 @@ body {
 main .secUIndex {
   background: url("../../resources/img/fd2.jpg") no-repeat center fixed;
   background-size: cover;
-  height: 95vh;
+  height: 80vh;
   width: 100%; }
   main .secUIndex__info {
     display: flex;
@@ -235,7 +238,8 @@ main .secUIndex {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 50px; }
+    gap: 50px;
+    margin: 5% 0px; }
     .secTIndex__especialidad div {
       display: flex;
       justify-content: center;
@@ -272,3 +276,5 @@ main .secUIndex {
       background: #000000c0;
       text-align: center;
       line-height: 250px; }
+  .secCIndex__calendario {
+    margin: 5% auto; }
