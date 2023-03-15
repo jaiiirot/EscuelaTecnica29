@@ -1,0 +1,64 @@
+// Header
+.red{
+    width: 100%;
+    @include flex(space-around, center);
+    background: $color-gumental;
+    height: 2.5rem;
+    ul{
+        height: 100%;
+        gap: 20px;
+        li{
+            @include flexAlign(center);
+            a{
+                color: $color-blanco;
+                font-size: 1rem;
+                @include flexAlign(center);
+                gap: 5px;
+                padding: 0px 5px;
+            }
+        }
+        li:hover{
+            background: $color-blanco;
+            height: 100%;
+            a{
+                color: $color-negro;
+            }   
+        } 
+    }
+}
+.menu{
+    width: 100%;
+    height:min-content;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: $color-negrodefuminado 0px 10px 25px;
+    &__desk{
+        // margin-top: 30px;
+        background: $color-negcla;
+        @include flex(space-around,center);
+        a{ 
+            img{
+                height: 70px;
+            }
+        }
+        .menu__options{
+            gap: 15px;
+            li{
+                a{
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    color: $color-blanco;
+                    padding: 4px 10px;
+                }
+                a:hover{
+                    background: $color-charcoal;
+                }
+                .menu__options--active{
+                    color: $color-celclaro;
+                }
+            }
+        }
+    }
+}
+// Fin Header

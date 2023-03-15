@@ -1,0 +1,11 @@
+.butt{
+    padding: 15px 20px;
+    color: $color-blanco;
+    background: $color-rojo;
+    border-radius: 25px;
+    font-size: 1rem;
+    &:hover{
+        background: $color-gumental;
+        outline: 2px solid $color-blanco;
+    }
+}

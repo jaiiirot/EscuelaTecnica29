@@ -1,0 +1,16 @@
+@mixin flex($justify, $align){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+@mixin flexAlign($align){
+    display: flex;
+    align-items: $align;
+}
+@mixin titleDefunino($background, $line-heigt){
+    font-size: 2.5rem;
+    color: $color-blanco;
+    background: $background;
+    text-align: center;
+    line-height: $line-heigt;
+}
