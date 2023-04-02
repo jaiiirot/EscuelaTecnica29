@@ -1,7 +1,7 @@
 // INDEX
 main{
     .secUIndex{
-        background: url("../../resources/img/fd2.jpg") no-repeat center fixed;
+        background: url("../resources/img/fd2.jpg") no-repeat center fixed;
         background-size: cover;
         height: 80vh;
         width: 100%;
@@ -109,7 +109,7 @@ main{
     text-align: center;
     &__titleEspecialidad{
         height: 250px;
-        background: url("../../resources/img/fd4.jpg") no-repeat center fixed;
+        background: url("../resources/img/fd4.jpg") no-repeat center fixed;
         background-size: cover;
         clip-path: polygon(0 25%, 100% 0%, 100% 100%, 0 70%);
         h2{
@@ -151,7 +151,7 @@ main{
     text-align: center;
     &__titleInformacion{
         height: 250px;
-        background: url("../../resources/img/fd1.jpg") no-repeat bottom fixed;
+        background: url("../resources/img/fd1.jpg") no-repeat bottom fixed;
         background-size: cover;
         clip-path: polygon(0 0, 100% 30%, 100% 70%, 0 100%);
         h2{
