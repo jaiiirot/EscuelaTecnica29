@@ -1,7 +1,7 @@
 // INDEX
 main{
     .secUIndex{
-        background: url("https://raw.githubusercontent.com/Jairo-Tumiri/EscuelaTecnica29/main/images/img/fd2.jpeg") no-repeat center fixed;
+        background: url("../images/img/fd2.jpeg") no-repeat center fixed;
         background-size: cover;
         height: 80vh;
         width: 100%;
@@ -55,6 +55,7 @@ main{
         align-content: center;
 
         .card{
+            cursor: pointer;
             border: 2px solid #dddddd;
             background: $color-blanco;
             overflow: hidden;
@@ -109,7 +110,7 @@ main{
     text-align: center;
     &__titleEspecialidad{
         height: 250px;
-        background: url("https://github.com/Jairo-Tumiri/EscuelaTecnica29/blob/main/images/img/fd4.jpeg?raw=true") no-repeat center fixed;
+        background: url("../images/img/fd4.jpeg") no-repeat center fixed;
         background-size: cover;
         clip-path: polygon(0 25%, 100% 0%, 100% 100%, 0 70%);
         h2{
@@ -151,7 +152,7 @@ main{
     text-align: center;
     &__titleInformacion{
         height: 250px;
-        background: url("https://github.com/Jairo-Tumiri/EscuelaTecnica29/blob/main/images/img/fd1.jpeg?raw=true") no-repeat bottom fixed;
+        background: url("../images/img/fd1.jpeg") no-repeat bottom fixed;
         background-size: cover;
         clip-path: polygon(0 0, 100% 30%, 100% 70%, 0 100%);
         h2{
