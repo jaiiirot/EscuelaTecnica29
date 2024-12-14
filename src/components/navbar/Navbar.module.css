@@ -1,0 +1,88 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  background: rgb(39, 85, 102);
+  background: linear-gradient(
+    45deg,
+    rgba(39, 85, 102, 1) 0%,
+    rgba(35, 76, 91, 1) 100%
+  );
+  align-items: center;
+  padding: 0.5rem 3rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  font-size: 0.8rem;
+}
+
+.logo a {
+  font-family: var(--family-title);
+  color: var(--color-4);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.logo h5, h3{
+    font-family: var(--family-title);
+}
+
+.logo a img {
+  height: 60px;
+  object-fit: cover;
+}
+
+.lista {
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+}
+.lista li a {
+  color: var(--color-4);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem;
+  cursor: pointer;
+  position: relative;
+}
+.lista li a:hover {
+  background-color: var(--color-3);
+}
+
+.active:hover ~ .submenu {
+  height: max-content;
+}
+
+.submenu {
+  height: 0px;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 10px 10px;
+  z-index: 1000;
+  margin-top: 0.5rem;
+  overflow: hidden;
+}
+
+.submenu:hover {
+  height: max-content;
+  color: #000;
+}
+
+.submenu nav {
+  text-decoration: none;
+  list-style: none;
+  height: 100%;
+}
+.submenu nav a {
+  display: block;
+  padding: 0.5rem;
+  color: var(--color-9);
+  text-decoration: none;
+}
+.submenu nav a:hover {
+  color: var(--color-4);
+}

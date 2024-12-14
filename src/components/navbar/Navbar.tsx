@@ -1,78 +1,52 @@
+import lgp from "../../assets/images/icons/logo256.ico";
+import styles from "./Navbar.module.css";
+import { Link } from "react-router-dom";
 export default function Navbar() {
+  const s = styles;
   return (
-    <>
-    <div className="red">
-      <ul>
+    <header className={s.header}>
+      <div className={s.logo}>
+        <Link to="/">
+          <img src={lgp} alt="Logo" />
+          <span>
+            <h5>Escuela Técnica</h5>
+            <h3>"Reconquista de Buenos Aires"</h3>
+          </span>
+        </Link>
+      </div>
+      <nav className={s.lista}>
         <li>
-          <a href="">
-            <img
-              loading="lazy"
-              src="https://img.icons8.com/fluency/24/null/facebook.png"
-            />
-          </a>
+          <Link to="/institucion">INSTITUCION</Link>
         </li>
         <li>
-          <a href="">
-            <img
-              loading="lazy"
-              src="https://img.icons8.com/color/24/null/instagram-new--v1.png"
-            />
-          </a>
+          <Link to="/unoCiclo">1° CICLO</Link>
         </li>
         <li>
-          <a href="">
-            <img
-              loading="lazy"
-              src="https://img.icons8.com/color/24/null/youtube-play.png"
-            />
-          </a>
-        </li>
-      </ul>
-      <ul>
-        <li>
-          <a href="">
-            Campus
-            <img
-              loading="lazy"
-              src="https://img.icons8.com/color/20/null/graduation-cap.png"
-            />
-          </a>
+          <a className={s.active}>2° CICLO</a>
+          <div className={s.submenu}>
+            <nav>
+              <li>
+                <Link to="/computacion">COMPUTACION</Link>
+              </li>
+              <li>
+                <Link to="/electricidad">ELECTRICIDAD</Link>
+              </li>
+              <li>
+                <Link to="/mecanica">MECANICA</Link>
+              </li>
+            </nav>
+          </div>
         </li>
         <li>
-          <a href="">
-            Aulas{" "}
-            <img
-              loading="lazy"
-              src="https://img.icons8.com/color/20/null/google-classroom.png"
-            />
-          </a>
+          <Link to="/novedades">NOVEDADES</Link>
         </li>
-      </ul>
-    </div>
-    <header className="menu">
-      <nav className="menu__desk">
-        <a href="#">
-          <img loading="lazy" src="./images/icons/ln1.png" alt="" />
-        </a>
-        <ul className="menu__options">
-          <li>
-            <a href="section/institucion.html">Institucion</a>
-          </li>
-          <li>
-            <a href="./section/unoCiclo.html">1° Ciclo</a>
-          </li>
-          <li>
-            <a href="">2° Ciclo +</a>
-          </li>
-          <li>
-            <a href="#">Novedades</a>
-          </li>
-          <li>
-            <a href="">Contacto</a>
-          </li>
-        </ul>
+        <li>
+          <Link to="/ecoet29">ECOET29</Link>
+        </li>
+        <li>
+          <Link to="/cooperadora">COOPERADORA</Link>
+        </li>
       </nav>
-    </header>  
-    </>
-  )
+    </header>
+  );
 }
