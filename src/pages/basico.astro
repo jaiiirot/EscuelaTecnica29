@@ -1,0 +1,153 @@
+---
+import Formacion from "../components/Formacion.astro";
+import Layout from "../layouts/Layout.astro";
+const uno = {
+  anio: "1° AÑO",
+  formacion: [
+    {
+      name: "CAMPO DE FORMACIÓN GENERAL",
+      materias: [
+        "Biología",
+        "Educación artística",
+        "Educación ciudadana",
+        "Educación Física",
+        "Geografía",
+        "Historia",
+        "Inglés",
+        "Lengua y literatura",
+      ],
+    },
+    {
+      name: "CAMPO DE FORMACIÓN CIENTÍFICO TECNOLÓGICO",
+      materias: ["Matemática", "Tecnología de la representación", "Taller"],
+    },
+  ],
+};
+const dos = {
+  anio: "2° AÑO",
+  formacion: [
+    {
+      name: "CAMPO DE FORMACIÓN GENERAL",
+      materias: [
+        "Biología",
+        "Educación ciudadana",
+        "Educación Física",
+        "Geografía",
+        "Historia",
+        "Inglés",
+        "Lengua y literatura",
+      ],
+    },
+    {
+      name: "CAMPO DE FORMACIÓN CIENTÍFICO TECNOLÓGICO",
+      materias: [
+        "Física",
+        "Matemática",
+        "Tecnología de la representación",
+        "Taller",
+      ],
+    },
+  ],
+};
+---
+
+<Layout>
+  <section class="container-65 unociclo">
+    <header>
+      <h1>CICLO BASICO | 1° CICLO</h1>
+      <h2>
+        Metas de Aprendizaje de la Educación Técnico <br /> Profesional de Nivel
+        Secundario
+      </h2>
+    </header>
+    <div class="unociclo__info">
+      <p>
+        El ciclo básico en la Escuela Técnica N.º 29 "Reconquista de Buenos
+        Aires" forma parte de la Modalidad Técnico Profesional de nivel
+        secundario y está diseñado para proporcionar una formación inicial común
+        en diversas áreas técnico-científicas. Su propósito es desarrollar
+        conocimientos generales y habilidades prácticas que permitan a los
+        estudiantes abordar problemáticas tecnológicas, sentando las bases para
+        las especializaciones técnicas del ciclo superior.
+      </p>
+      <div class="unociclo__list">
+        <p>
+          <strong>
+            1. Propósitos generales propios de este nivel obligatorio de la
+            enseñanza:
+          </strong>
+          formación para la inserción social y ciudadana, formación propedéutica
+          para la continuación de estudios en los niveles superiores.
+        </p>
+        <p>
+          <strong>
+            2. Propósitos profesionalizantes que son específicos de la
+            modalidad:
+          </strong>
+          formación técnica especializada en relación con el mundo del trabajo, referida
+          a áreas ocupacionales identificables y cuya complejidad y amplitud requiere
+          formar capacidades profesionales a través de procesos formativos sistemáticos
+          y prolongados.
+        </p>
+      </div>
+    </div>
+
+    <div class="unociclo__btn">
+      <span>
+        <a
+          href="https://boletinoficial.buenosaires.gob.ar/normativaba/norma/252992"
+          target="_blank">Resolución N° 4145 SSGECP/2012</a
+        >
+      </span>
+    </div>
+    <hr />
+  </section>
+
+  <section class="container-65 unociclo__plan">
+    <Formacion {...uno} />
+    <Formacion {...dos} />
+  </section>
+</Layout>
+
+<style>
+  .unociclo {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .unociclo header {
+    text-align: center;
+  }
+
+  .unociclo__list {
+    padding: 0 1rem;
+  }
+
+  .unociclo__btn {
+    margin: 1rem auto;
+  }
+
+  .unociclo__btn a {
+    text-decoration: none;
+    color: var(--color-4);
+    background-color: var(--color-3);
+    padding: 1rem 2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: var(--radius-xs);
+  }
+
+  .unociclo__btn a:hover {
+    background-color: var(--color-2);
+    border-radius: var(--radius-ms);
+  }
+
+  .unociclo__plan {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 1rem 1rem;
+  }
+</style>

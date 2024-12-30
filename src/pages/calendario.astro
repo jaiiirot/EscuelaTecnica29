@@ -1,0 +1,182 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Date from "../components/Date.astro";
+const calendario2024 = [
+  {
+    fecha: "17 de Diciembre",
+    dia: "Martes",
+    detalle: "Jornada EMI",
+    tipo: 1,
+  },
+];
+const calendario2025 = [
+  { fecha: "1 de Enero", dia: "Miércoles", detalle: "Año Nuevo", tipo: 0 },
+  { fecha: "3 de Marzo", dia: "Lunes", detalle: "Carnaval", tipo: 0 },
+  { fecha: "4 de Marzo", dia: "Martes", detalle: "Carnaval", tipo: 0 },
+  {
+    fecha: "24 de Marzo",
+    dia: "Lunes",
+    detalle: "Día Nacional de la Memoria por la Verdad y la Justicia",
+    tipo: 0,
+  },
+  {
+    fecha: "2 de Abril",
+    dia: "Miércoles",
+    detalle: "Día del Veterano y de los Caídos en la Guerra de Malvinas",
+    tipo: 0,
+  },
+  { fecha: "17 de Abril", dia: "Jueves", detalle: "Jueves Santo", tipo: 0 },
+  { fecha: "18 de Abril", dia: "Viernes", detalle: "Viernes Santo", tipo: 0 },
+  {
+    fecha: "1 de Mayo",
+    dia: "Jueves",
+    detalle: "Día del Trabajador",
+    tipo: 0,
+  },
+  {
+    fecha: "25 de Mayo",
+    dia: "Domingo",
+    detalle: "Día de la Revolución de Mayo",
+    tipo: 0,
+  },
+  {
+    fecha: "16 de Junio",
+    dia: "Lunes",
+    detalle: "Paso a la Inmortalidad del General Martín Miguel de Güemes",
+    tipo: 0,
+  },
+  {
+    fecha: "20 de Junio",
+    dia: "Viernes",
+    detalle: "Paso a la Inmortalidad del General Manuel Belgrano",
+    tipo: 0,
+  },
+  {
+    fecha: "9 de Julio",
+    dia: "Miércoles",
+    detalle: "Día de la Independencia",
+    tipo: 0,
+  },
+  {
+    fecha: "18 de Agosto",
+    dia: "Lunes",
+    detalle: "Paso a la Inmortalidad del General José de San Martín",
+    tipo: 0,
+  },
+  {
+    fecha: "13 de Octubre",
+    dia: "Lunes",
+    detalle: "Día del Respeto a la Diversidad Cultural",
+    tipo: 0,
+  },
+  {
+    fecha: "12 de Noviembre",
+    dia: "Miércoles",
+    detalle: "Día de la Soberanía Nacional",
+    tipo: 0,
+  },
+  {
+    fecha: "8 de Diciembre",
+    dia: "Lunes",
+    detalle: "Día de la Inmaculada Concepción de María",
+    tipo: 0,
+  },
+  { fecha: "25 de Diciembre", dia: "Jueves", detalle: "Navidad", tipo: 0 },
+];
+---
+
+<Layout>
+  <section class="calendar">
+    <header>
+      <span>
+        <h1>CALENDARIO ESCOLAR</h1>
+      </span>
+    </header>
+    <div class="container-calendario">
+      <div>
+        <h2>¿Qué es el calendario escolar?</h2>
+        <p>
+          El calendario escolar es un documento que establece las fechas de
+          inicio y finalización de las clases, los recesos y las vacaciones de
+          los alumnos. Además, en él se incluyen las fechas de los feriados
+          nacionales y los días no laborables.
+        </p>
+      </div>
+      <br />
+      <div class="buttons">
+        <span class="btn">
+          <a href="#calendario-2024">Calendario Escolar 2024</a>
+        </span>
+        <span class="btn">
+          <a href="#calendario-2025">Calendario Escolar 2025</a>
+        </span>
+      </div>
+    </div>
+  </section>
+  <div class="container-calendario">
+    <hr />
+  </div>
+  <section class="container-calendario">
+    <Date calendario={calendario2024} anio="2024" id="calendario-2024" />
+    <Date calendario={calendario2025} anio="2025" id="calendario-2025" />
+  </section>
+</Layout>
+
+<style>
+  .buttons {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .calendar {
+    header {
+      background-image: url("https://images.pexels.com/photos/5408684/pexels-photo-5408684.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      text-align: center;
+      height: 250px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      span {
+        position: absolute;
+        color: var(--color-4);
+        h1 {
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+  .container-calendario {
+    margin: 1rem auto;
+    width: 80%;
+  }
+  table {
+    width: 100%;
+    background-color: var(--color-1);
+  }
+
+  thead {
+    background-color: var(--main-color);
+    color: white;
+  }
+
+  thead th {
+    padding: 1rem;
+    text-align: left;
+    font-weight: bold;
+  }
+
+  tbody td {
+    padding: 0.8rem;
+    border-bottom: 1px solid var(--color-4);
+  }
+</style>

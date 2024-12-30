@@ -1,0 +1,81 @@
+---
+interface Calendario {
+  fecha: string;
+  dia: string;
+  detalle: string;
+  tipo: number;
+}
+const { id, anio, calendario } = Astro.props;
+const colors = [
+  "#fff", // Blanco - Sin Clasificar 🆗
+  "#e2ffe3", // Verde Pastel - Fácil 🆗
+  "#FFEB3B", // Amarillo - Intermedio 🆗
+];
+---
+
+<article id={id}>
+  <h2>{anio}</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>ITEM</th>
+        <th>FECHA</th>
+        <th>DÍA</th>
+        <th>DETALLE</th>
+      </tr>
+    </thead>
+    <tbody>
+      {
+        calendario.map((item: Calendario, index: number) => (
+          <tr style={{ backgroundColor: colors[item.tipo] }}>
+            <td class="center">{index + 1}</td>
+            <td>{item.fecha}</td>
+            <td class="center">{item.dia}</td>
+            <td>{item.detalle}</td>
+          </tr>
+        ))
+      }
+    </tbody>
+  </table>
+</article>
+
+<style>
+  article {
+    height: max-content;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  table {
+    width: 100%;
+    background-color: var(--color-1);
+    border-radius: var(--radius-ms);
+    border: 1px solid var(--color-1);
+    overflow: hidden;
+  }
+
+  thead {
+    background-color: var(--main-color);
+    color: white;
+  }
+
+  thead th {
+    padding: 0.5rem;
+    text-align: left;
+    font-weight: bold;
+  }
+
+  tbody td {
+    padding: 0.25rem;
+    /* border-bottom: 1px solid var(--color-10); */
+    font-weight: 500;
+  }
+
+  td.center {
+    text-align: center;
+  }
+
+  tr:hover {
+    cursor: pointer;
+  }
+</style>

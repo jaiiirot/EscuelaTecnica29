@@ -1,0 +1,28 @@
+---
+const { images, content, classslide } = Astro.props;
+---
+
+<div class={`container-slide ${classslide}`}>
+  <div class="content">
+    {content}
+  </div>
+</div>
+
+<script>
+  
+</script>
+
+<style>
+  .slide {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+  }
+  .content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+  }
+</style>

@@ -1,0 +1,35 @@
+---
+const { color } = Astro.props;
+---
+
+<div>
+  <div class="logo">
+    <a href="/">
+      <img src="logo.ico" alt="Logo" />
+      <span style={{ color }}>
+        <h5>Escuela Técnica</h5>
+        <h3>"Reconquista de Buenos Aires"</h3>
+      </span>
+    </a>
+  </div>
+</div>
+<style>
+  .logo a {
+    font-family: var(--family-title);
+    color: var(--color-4);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  .logo h5,
+  h3 {
+    font-family: var(--family-title);
+  }
+
+  .logo a img {
+    height: 60px;
+    object-fit: cover;
+  }
+</style>

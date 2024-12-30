@@ -1,0 +1,67 @@
+---
+interface Campo {
+  name: string;
+  materias: string[];
+}
+const { anio, formacion } = Astro.props;
+---
+
+<article>
+  <h2>{anio}</h2>
+  {
+    formacion.map((campo: Campo) => (
+      <div>
+        <h3>{campo.name}</h3>
+        <ul>
+          {campo.materias.map((materia) => (
+            <li>
+              <strong>{materia}</strong>
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))
+  }
+</article>
+
+<style>
+  article {
+    border: solid 1px var(--color-1);
+    width: 100%;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: var(--radius-ms);
+
+    h2 {
+      color: var(--color-3);
+      font-weight: 800;
+      font-size: 2rem;
+    }
+    div {
+      margin-top: 1rem;
+
+      h3 {
+        margin: 1rem 0;
+        text-align: center;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        gap: 1rem;
+        li {
+          background-color: var(--color-3);
+          color: var(--color-4);
+          padding: 10px 20px;
+          font-size: 0.8rem;
+          text-align: center;
+          cursor: pointer;
+          font-weight: 600;
+          border-radius: var(--radius-xs);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.424);
+        }
+      }
+    }
+  }
+</style>

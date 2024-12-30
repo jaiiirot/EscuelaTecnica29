@@ -1,0 +1,82 @@
+---
+
+---
+
+<section>
+  <div>
+    <iframe
+      width="425"
+      height="350"
+      src="https://www.openstreetmap.org/export/embed.html?bbox=-58.41709882020951%2C-34.62237995391655%2C-58.414845764637%2C-34.620848123060725&layer=mapnik&marker=-34.621614042023054%2C-58.41597229242325"
+    ></iframe>
+    <br /><small
+      ><a
+        href="https://www.openstreetmap.org/?mlat=-34.621614&mlon=-58.415972#map=19/-34.621614/-58.415972"
+        >Ver el mapa más grande</a
+      ></small
+    >
+  </div>
+  <div
+    class="col-6"
+    style="background: url('https://www.alu.tecnica29de6.edu.ar/assets/images/et29frente-1280x720.jpeg') no-repeat;"
+  >
+    <div class="card-boton mt-4">
+      <a
+        target="_blank"
+        href="https://cdn2.buenosaires.gob.ar/bsas/establecimientos-educativos/tour_360/020129800/360_020129800.html"
+      >
+        <div class="leyenda">
+          <img
+            src="https://buscatuescuela.buenosaires.gob.ar/assets/images/360.svg"
+            height="70px"
+          />
+          <p class="texto-boton">Recorré la escuela en 360º</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+    section{
+        display: flex;
+    }
+  /* Imagen de fondo */
+  .col-6 {
+    background-position: center;
+    background-size: cover;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card-boton {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  .leyenda img {
+    width: 70px;
+    height: auto;
+  }
+  /* Mapa de OpenStreetMap */
+  iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 350px;
+    margin: 2rem auto;
+    border: none;
+  }
+
+  small a {
+    color: var(--color-1);
+    text-decoration: none;
+  }
+
+  small a:hover {
+    text-decoration: underline;
+  }
+</style>

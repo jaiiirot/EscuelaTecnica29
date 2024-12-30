@@ -1,0 +1,197 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Formacion from "../components/Formacion.astro";
+const tres = {
+  anio: "3° AÑO",
+  formacion: [
+    {
+      name: "CAMPO DE FORMACIÓN GENERAL",
+      materias: [
+        "Educación ciudadana",
+        "Educación física",
+        "Geografía",
+        "Historia",
+        "Inglés",
+        "Lengua y literatura",
+      ],
+    },
+    {
+      name: "CAMPO DE FORMACIÓN CIENTÍFICO TECNOLÓGICO",
+      materias: [
+        "Física",
+        "Matemática",
+        "Química",
+        "Taller tecnología de control",
+        "Tecnología de la representación",
+      ],
+    },
+    {
+      name: "CAMPO DE FORMACIÓN ESPECÍFICA",
+      materias: ["Taller"],
+    },
+  ],
+};
+const cuatro = {
+  anio: "4° AÑO",
+  formacion: [
+    {
+      name: "CAMPO DE FORMACIÓN GENERAL",
+      materias: ["Educación física", "Inglés", "Lengua y literatura"],
+    },
+    {
+      name: "CAMPO DE FORMACIÓN CIENTÍFICO TECNOLÓGICO",
+      materias: ["Matemática"],
+    },
+    {
+      name: "CAMPO DE FORMACIÓN ESPECÍFICA",
+      materias: [
+        "Dibujo Mecánico",
+        "Electrotecnia",
+        "Hidráulica Industrial",
+        "Mecánica Técnica",
+        "Química Aplicada",
+        "Taller",
+        "Tecnología de los materiales",
+      ],
+    },
+  ],
+};
+const cinco = {
+  anio: "5° AÑO",
+  formacion: [
+    {
+      name: "CAMPO DE FORMACIÓN GENERAL",
+      materias: ["Educación física", "Inglés", "Lengua y literatura"],
+    },
+    {
+      name: "CAMPO DE FORMACIÓN CIENTÍFICO TECNOLÓGICO",
+      materias: ["Matemática"],
+    },
+    {
+      name: "CAMPO DE FORMACIÓN ESPECÍFICA",
+      materias: [
+        "Dibujo Mecánico II",
+        "Laboratorio de ensayo de Materiales",
+        "Mecanismos",
+        "Prácticas Profesionalizantes",
+        "Resistencia de Materiales",
+        "Taller",
+        "Termodinámica",
+      ],
+    },
+  ],
+};
+const seis = {
+  anio: "6° AÑO",
+  formacion: [
+    {
+      name: "CAMPO DE FORMACIÓN GENERAL",
+      materias: [
+        "Ciencia y tecnología",
+        "Ciudadanía y trabajo",
+        "Educación física",
+      ],
+    },
+    {
+      name: "CAMPO DE FORMACIÓN CIENTÍFICO TECNOLÓGICO",
+      materias: [
+        "Economía y gestión de las organizaciones",
+        "Gestión de los procesos productivos",
+      ],
+    },
+    {
+      name: "CAMPO DE FORMACIÓN ESPECÍFICA",
+      materias: [
+        "Instalaciones industriales y Mantenimiento",
+        "Instalaciones Termodinámicas",
+        "Instrumentación y ensayo de máquinas y motores",
+        "Prácticas Profesionalizantes",
+        "Proyecto mecánico",
+        "Seguridad e higiene y Medio Ambiente",
+        "Sistemas de elevación y transporte",
+        "Taller",
+        "Tecnología de fabricación",
+      ],
+    },
+  ],
+};
+---
+
+<Layout>
+  <section class="container">
+    <div class="image" style="">
+      <span>
+        <img src="mecanica.png" alt="" />
+      </span>
+    </div>
+    <h1>MECANICA</h1>
+  </section>
+  <section class="container-65">
+    <hr />
+    <header>
+      <h2>DISEÑO CURRICULAR</h2>
+    </header>
+    <div class="containerplan">
+      <Formacion {...tres} />
+      <Formacion {...cuatro} />
+      <Formacion {...cinco} />
+      <Formacion {...seis} />
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    div {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      background-color: black;
+      span {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        bottom: -70px;
+        background: var(--color-4);
+        padding: 1rem;
+        border-radius: 50%;
+        img {
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+    }
+    h1 {
+      font-size: 2rem;
+      margin: 5rem 0 0;
+    }
+  }
+
+  header {
+    text-align: center;
+    margin: 2rem 0;
+  }
+
+  header h2 {
+    font-size: 2rem;
+  }
+
+  .containerplan {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+</style>
