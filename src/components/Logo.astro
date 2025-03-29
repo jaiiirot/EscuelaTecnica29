@@ -7,8 +7,7 @@ const { color } = Astro.props;
     <a href="/">
       <img src="logo.ico" alt="Logo" />
       <span style={{ color }}>
-        <h5>Escuela Técnica</h5>
-        <h3>"Reconquista de Buenos Aires"</h3>
+        <h5>ET 29</h5>
       </span>
     </a>
   </div>
@@ -26,10 +25,11 @@ const { color } = Astro.props;
   .logo h5,
   h3 {
     font-family: var(--family-title);
+    font-size: 1rem;
   }
 
   .logo a img {
-    height: 60px;
+    height: 40px;
     object-fit: cover;
   }
 </style>

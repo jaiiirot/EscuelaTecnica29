@@ -112,7 +112,6 @@ const seis = {
     },
   ],
 };
-
 ---
 
 <Layout>
@@ -135,8 +134,26 @@ const seis = {
       <Formacion {...cinco} />
       <Formacion {...seis} />
     </div>
+    <swiper-container>
+      <swiper-slide><Formacion {...tres} /></swiper-slide>
+      <swiper-slide> <Formacion {...cuatro} /></swiper-slide>
+      <swiper-slide> <Formacion {...cinco} /></swiper-slide>
+      <swiper-slide> <Formacion {...seis} /></swiper-slide>
+    </swiper-container>
   </section>
 </Layout>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    freeMode: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+</script>
 
 <style>
   .container {
